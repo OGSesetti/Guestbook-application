@@ -1,15 +1,28 @@
+const express = require('express');
+const app = express();
+app.use(express.static('public'));
 var http = require("http");
 
-http.createServer(function (request, response) {
-    response.writeHead(200, { 'Content-Type': 'text/html' });
-    
-    
-    var heading1 = "<h1>Heading 1</h1>";
-    var heading2 = "<h2>Heading 2</h2>";
-    var newParagraph = "What's up guys my name is Dirk Tendick and I am here, stuck in a web server! Help!";
+// /, /guestbook, /newmessage, /ajaxmessage
 
-    response.write(heading1 + heading2 + newParagraph)
-    response.end('');
-}).listen(8081);
 
-console.log('Server running at http://127.0.0.1:8081')
+app.get('/', function(req, res){
+
+});
+
+app.get('/guestbook', function(req, res){
+
+});
+
+app.get('/newmessage', function(req, res){
+
+});
+
+app.get('/ajaxmessage', function(req, res){
+
+});
+
+const port = 8081;
+app.listen(port, () =>{
+    console.log('Server running on http://localhost:${PORT}')
+});
