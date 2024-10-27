@@ -1,0 +1,13 @@
+tilaa lista guestbook-sivulta
+    tallenna json
+    parse
+    pierase html -> jonka jälkeen parsee siihen loopilla lista?
+    
+    /newmessage
+    
+tee tyylit
+
+kirjoitettu raportti
+
+videoraportti
+

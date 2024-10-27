@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-
+const fs = require('fs');
 var http = require("http");
 const path = require('path')
 
 app.use(express.static('public'));
 // /, /guestbook, /newmessage, /ajaxmessage
-
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function(req, res){
 res.sendFile(path.join(__dirname, 'public', '/index.html'));
@@ -14,6 +14,13 @@ console.log('toimii')
 });
 
 app.get('/guestbook', function(req, res){
+    const listFilePath = path.join(__dirname, 'data', 'guestlist.json');
+
+    fs.readFile(listFilePath, 'utf8', (err,data)=>{
+
+        if (err) throw err;
+
+    var guests = JSON.parse(data);
     let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,25 +38,40 @@ app.get('/guestbook', function(req, res){
 <h1>Vieraslista</h1>
     </div>
 
-    <div="pure-g">
+    <div class="pure-g">
 <div class="pure-u-1">
-<button>Etusivu</button>
-<button>Vieraslista</button>
+<a href="/"> <button>Etusivu</button>    </a>
+<a href="/guestbook"> <button>Vieraslista</button>    </a>
  </div>
 
  <div class="pure-u-1">
- <ul>
-<li></li>
+<table class="pure-table">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Country</th>
+        <th>Message</th>
+        <th>Timestamp</th>
+    </tr>
+    </thead>
 
 
- </ul>
-     </div>
-
-
-</body>
+</tbody>
 </html>
     
     `;
+guests.forEach(guest =>{
+    html +=  `<tr>
+    <td>${guest.username}</td>
+    <td>${guest.country}</td>
+    <td>${guest.message}</td>
+    <td>${guest.stimestamp}</td>
+    </tr>`;
+});
+
+html += `</table></div></div></body></html>`;
+    //tänne lisää
+
     res.send(html);
 });
 
@@ -60,6 +82,22 @@ app.get('/newmessage', function(req, res){
 app.get('/ajaxmessage', function(req, res){
 
 });
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const port = 8081;
 app.listen(port, () =>{
