@@ -37,19 +37,55 @@
   {
     "username": "Dirk Tendick",
     "country": "New York",
-    "message": "What's up guys",
+    "message": "What's up guys!",
     "timestamp": "2024-10-29T16:57:12.239Z"
   },
   {
     "username": "Revolver Jesse",
     "country": "Finland",
-    "message": "I am Revolver Jesse",
+    "message": "I am Revolver Jesse.",
     "timestamp": "2024-10-29T17:02:33.450Z"
   },
   {
     "username": "Psycho Stonie",
     "country": "Not sure",
-    "message": "Yep",
+    "message": "Yep!",
     "timestamp": "2024-10-29T17:03:12.674Z"
+  },
+  {
+    "username": "Liquid Tendick",
+    "country": "America!",
+    "message": "Buahahaaa!",
+    "timestamp": "2024-10-30T18:07:40.524Z"
+  },
+  {
+    "username": "Big Boss Adam Richman",
+    "country": "USA",
+    "message": "Where is the buffet?",
+    "timestamp": "2024-10-30T22:22:35.180Z"
+  },
+  {
+    "username": "Elvis Pretzley",
+    "country": "USA",
+    "message": "ee-HEE-HEEE!",
+    "timestamp": "2024-10-30T23:35:20.891Z"
+  },
+  {
+    "username": "Toast Malone",
+    "country": "USA",
+    "message": "MMHhhhph!",
+    "timestamp": "2024-10-30T23:41:54.937Z"
+  },
+  {
+    "username": "Waffel Buffet",
+    "country": "USA",
+    "message": "I am in severe debt.",
+    "timestamp": "2024-10-30T23:52:19.666Z"
+  },
+  {
+    "username": "EMPEROR Palsanmäki",
+    "country": "Finland",
+    "message": "You probably have for this stuff... a price!",
+    "timestamp": "2024-10-30T23:58:26.075Z"
   }
 ]

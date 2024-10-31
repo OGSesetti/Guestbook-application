@@ -7,10 +7,3 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 })
-
-
-
-function switchPage(page){
-
-
-};
