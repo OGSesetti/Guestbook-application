@@ -2,8 +2,7 @@ const { isUtf8 } = require('buffer');
 const express = require('express');
 const app = express();
 const fs = require('fs');
-var http = require("http");
-const path = require('path')
+const path = require('path');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -89,7 +88,7 @@ app.get('/newmessage', function(req, res){
         <label for ="message">Message:</label>
         <input type = "text" name = "message" id="message" required>
 
-        <button type ="submit" class ="pure-button-primary">Submit</button>
+        <button type ="submit" id="submitButton" class ="pure-button-primary">Submit</button>
         <button type ="button" id="ajaxSubmitButton" class = "pure-button-secondary">Submit with a cool AJAX-call</button>
         </form>
         `;
